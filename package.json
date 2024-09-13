@@ -1,0 +1,20 @@
+{
+  "name": "mono-repos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "host",
+    "dashboard",
+    "remote",
+    "remote1"
+  ],
+  "scripts": {
+    "start:host": "yarn workspace host start",
+    "start:dashboard": "yarn workspace dashboard start",
+    "start:remote": "yarn workspace remote start",
+    "start:remote1": "yarn workspace remote1 start",
+    "start": "yarn start:host && yarn start:dashboard && yarn start:remote && yarn start:remote1"
+  }
+}
